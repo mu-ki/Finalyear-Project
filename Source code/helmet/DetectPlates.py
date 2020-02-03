@@ -8,7 +8,7 @@ import random
 
 
 # module level variables ##########################################################################
-PLATE_WIDTH_PADDING_FACTOR = 1.7
+PLATE_WIDTH_PADDING_FACTOR = 1.5
 PLATE_HEIGHT_PADDING_FACTOR = 1.5
 
 ###################################################################################################

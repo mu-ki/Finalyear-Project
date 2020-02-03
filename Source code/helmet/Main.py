@@ -143,7 +143,7 @@ def writeLicensePlateCharsOnImage(imgOriginalScene, licPlate):
 import numpy as np
 import cv2
 import os
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from PIL import Image as img
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -168,13 +168,14 @@ while True:
     gray = cv2.cvtColor(frameresize, cv2.COLOR_BGR2GRAY) #convert grayscale_imsge
 
     faces = face_cascade.detectMultiScale(gray,1.3,5) #find facec cascade value
-    
+
     for(x,y,a,b) in faces:
         w, h = 300, 500
         print(x,y)
-        exit()
+
+        # exit()
         facecontour = cv2.rectangle(frameresize,(x,y),(x+a,y+b),(0,0,255),2)
-    
+
         rectangle = cv2.rectangle(frameresize,(x-120,y),(x+w,y+h),(0,0,255),2) #draw rectangle face detection
     #crop an image
     
@@ -194,6 +195,7 @@ while True:
         break
 cv2.destroyAllWindows()
 cap.release()
+
 
 
 
