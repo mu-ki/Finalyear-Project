@@ -18,7 +18,7 @@ pygame.mixer.music.load('audio/alert.wav')
 EYE_ASPECT_RATIO_THRESHOLD = 0.3
 
 #Minimum consecutive frames for which eye ratio is below threshold for alarm to be triggered
-EYE_ASPECT_RATIO_CONSEC_FRAMES = 30
+EYE_ASPECT_RATIO_CONSEC_FRAMES = 25
 
 #COunts no. of consecutuve frames below threshold value
 COUNTER = 0
