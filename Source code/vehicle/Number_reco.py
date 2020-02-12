@@ -1,5 +1,6 @@
 import pytesseract
-import urllib
+# import urllib
+import urllib.request
 import cv2
 import json
 import numpy as np
