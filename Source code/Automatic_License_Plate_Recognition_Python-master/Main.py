@@ -8,6 +8,7 @@ import DetectChars
 import DetectPlates
 import PossiblePlate
 
+
 # module level variables ##########################################################################
 SCALAR_BLACK = (0.0, 0.0, 0.0)
 SCALAR_WHITE = (255.0, 255.0, 255.0)
@@ -27,7 +28,7 @@ def main():
         return                                                          # and exit program
     # end if
 
-    imgOriginalScene  = cv2.imread("LicPlateImages/191.jpg")               # open image
+    imgOriginalScene  = cv2.imread("LicPlateImages/188.jpg")               # open image in 191,148 for kl
 
     if imgOriginalScene is None:                            # if image was not read successfully
         print("\nerror: image not read from file \n\n")  # print error message to std out

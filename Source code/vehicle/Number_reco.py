@@ -10,7 +10,7 @@ from pytesseract import image_to_string
 
 
 List = pd.read_json('Indian_Number_plates.json', lines=True)
-pd.set_option('display.max_colwidth', -1)
+pd.set_option('display.max_colwidth', 1)
 del List['extras']
 List['points'] = List.apply(lambda Row: Row['annotation'][0]['points'], axis=1)
 del List['annotation']
@@ -32,7 +32,7 @@ for index,Row in List.iterrows():
     plateImage = fullImage.crop((xt, yt, xb, yb))
     Plates.append(np.array(plateImage))
     plateImage.save('image.png')
-    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
     img = cv2.imread('image.png')
     img = cv2.resize(img, (int(img.shape[1]*4), int(img.shape[0]*4)))
     Num = pytesseract.image_to_string(img)
